@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey form</title>
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+
+      <fieldset>
+        <label>Name <input placeholder="Enter your name" id="name" type="text" required></label>
+        <label>Email <input placeholder="Enter your email" id="email" type="email" required></label>
+        <label>Age (optional) <input placeholder="Age" id="number" type="number" min="13" max="120"></label>
+        <label>Which option best describes your current role?
+          <select id="dropdown" required>
+            <option value="" disabled selected>Select current role</option>
+            <option>Student</option>
+            <option>Full Time Job</option>
+            <option>Full Time Learner</option>
+            <option>Prefer not to say</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Would you recommend us to a friend?</legend>
+        <label><input id="definitely" value="Definitely" type="radio" name="recommend" checked> Definitely </label>
+        <label><input id="maybe" value="Maybe" type="radio" name="recommend"> Maybe </label>
+        <label><input id="not-sure" value="Not sure" type="radio" name="recommend"> Not sure </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>What would you like to see improved? (Check all that apply)</legend>
+        <label><input id="first" type="checkbox" value="First">First Service </label>
+        <label><input id="second" type="checkbox" value="Second">Second Service </label>
+        <label><input id="third" type="checkbox" value="Third">Third Service </label>
+        <label><input id="fourth" type="checkbox" value="Fourth">Fourth Service </label>
+        <label><input id="new" type="checkbox" value="New">Add New Services </label>
+        <label>Please share your additional comments with us:
+        <textarea id="comment" name="comment" placeholder="tell us your comments" rows="4" cols="50"></textarea></label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+  </html>
